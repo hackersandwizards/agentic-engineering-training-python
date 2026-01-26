@@ -1,0 +1,28 @@
+default:
+  # extra long default timeout from project settings is only required for labmachine
+  timeout: 15m
+
+variables:
+  COURSE_ORIGIN: agentic-course
+  LAB_START:
+    description: "select which lab starting point"
+    value: none
+    options:
+      - "none"
+      - "desktop"
+  LAB_IMAGE_TAG:
+    description: "Labmachine Image Tag"
+    value: "latest"
+  CUSTOM_INIT:
+    description: "Option to deactivate custom init for this course, for debugging."
+    value: "true"
+  WORKFLOW_NAME: $CI_COMMIT_MESSAGE
+
+include:
+  # include labmachine only when lab is selected
+  - project: $CI_PROJECT_PATH
+    ref: main
+    file: /.gitlab-ci-material/labmachine.yaml
+    rules:
+    - if: $LAB_START != "none"
+      when: always

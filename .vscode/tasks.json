@@ -1,0 +1,18 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "install-default-extensions",
+      "type": "shell",
+      "command": "curl -L -o /tmp/cline-latest.vsix https://github.com/wingsuitist/cline/releases/download/latest/cline-latest.vsix && code --force --install-extension /tmp/cline-latest.vsix && rm /tmp/cline-latest.vsix && code --install-extension bierner.markdown-mermaid && code --install-extension ms-kubernetes-tools.vscode-kubernetes-tools",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "clear": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}
