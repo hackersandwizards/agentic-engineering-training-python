@@ -1,12 +1,21 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-# Editor-based HTTP Client requests
-/httpRequests/
-.idea
-node_modules
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
 
-# Next.js build output
-.next/dev
+# Database
+*.sqlite
+*.db
 
-*.iml
+# Node
+node_modules/
+dist/
+
+# IDE
+.idea/
+.vscode/
+
+# Environment
+.env.local

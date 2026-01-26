@@ -1,1 +1,0 @@
-# course specific bashrc

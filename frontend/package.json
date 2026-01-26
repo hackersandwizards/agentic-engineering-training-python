@@ -1,0 +1,27 @@
+{
+  "name": "crm-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^3.8.0",
+    "@emotion/react": "^11.14.0",
+    "@tanstack/react-query": "^5.28.14",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.0",
+    "react-hook-form": "^7.49.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0"
+  }
+}
